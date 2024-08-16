@@ -1,0 +1,358 @@
+/* 
+Color pallete. This section defines variables for the color pallete,
+so that we can refer to particular colors by name instead of hexadecimal values.
+This is applied to the 'root' psuedo-element, which just means that these color
+variables are available to be used anywhere in our html document
+*/
+:root {
+  --white-font: #FFFFFF;
+  --black-font: #000000;
+
+  --color1: #FB8F67;
+  --color2: #FFC2B4;
+
+}
+
+
+.main-container {
+  max-width: 72em;
+  margin: 0 auto;
+  font-family: Inter;
+
+
+}
+
+
+.banner {
+
+    background-color: var(--color1);
+    color: var(--black-font);
+    padding: 1em;
+}
+
+.banner-title {
+
+  font-size: 3em;
+}
+
+.Card1 {
+  
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+
+}
+
+
+.card-image1 {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb1 {
+
+  padding: 1em;
+}
+
+.Card2 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+
+}
+
+
+.card-image2 {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb2 {
+ 
+  padding: 1em;
+}
+
+
+.Card3 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+
+}
+
+
+.card-image3 {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb3 {
+ 
+  padding: 1em;
+}
+
+
+.Card4 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+}
+
+
+.card-image4 {
+  width: 100%;
+  min-height: 32em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb4 {
+
+  padding: 1em;
+}
+
+
+.Card5 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+}
+
+
+.card-image5 {
+  width: 100%;
+  min-height: 32em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb5 {
+
+  padding: 1em;
+}
+
+
+.Card6 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+}
+
+
+.card-image6 {
+  width: 100%;
+  min-height: 32em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb6 {
+
+  padding: 1em;
+}
+
+.Card7 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+}
+
+
+.card-image7 {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb7 {
+
+  padding: 1em;
+}
+
+.Card8 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+}
+
+
+.card-image8 {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb8 {
+
+  padding: 1em;
+
+}
+.Card9 {
+
+  background-color: var(--color2);
+  color: var(--black-font);
+  padding: 1em;
+}
+
+
+.card-image9 {
+  width: 100%;
+  min-height: 16em;
+  display: flex;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.card-blurb9 {
+
+  padding: 1em;
+}
+
+
+
+
+#banner {
+
+  grid-area: ban;
+}
+
+#Card1 {
+
+  grid-area: c1;
+}
+
+#Card2 {
+
+  grid-area: c2;
+}
+
+#Card3 {
+
+  grid-area: c3;
+}
+#Card4 {
+
+  grid-area: c4;
+}
+
+#Card5 {
+
+  grid-area: c5;
+}
+
+#Card6 {
+
+  grid-area: c6;
+}
+#Card7 {
+
+  grid-area: c7;
+}
+
+#Card8 {
+
+  grid-area: c8;
+}
+
+#Card9 {
+
+  grid-area: c9;
+}
+
+
+
+
+.main-container {
+  display: grid;
+  column-gap: 1em;
+}
+
+/* 
+Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
+for the smallest screen sizes. In this case we want a single column that spans the main container.
+Because this CSS definition comes first, it will apply by default. Then we override it below with 
+media queries for progressively bigger screen widths
+*/
+@media (min-width: 8em) {
+  .main-container {
+    grid-template:
+    "ban ban ban ban"
+    "c1 c1 c1 c1" minmax(8em, auto)
+   ". . . ." minmax(4em, auto)
+   "c2 c2 c2 c2" minmax(8em, auto)
+   ". . . ." minmax(4em, auto)
+   "c3 c3 c3 c3" minmax(4em, auto)
+    "c4 c4 c4 c4" minmax(32em, auto)
+    ". . . ." minmax(4em, auto)
+    "c5 c5 c5 c5" minmax(32em, auto)
+    ". . . ." minmax(4em, auto)
+    "c6 c6 c6 c6" minmax(32em, auto)
+    ". . . ." minmax(4em, auto)
+    "c7 c7 c7 c7" minmax(8em, auto)
+    ". . . ." minmax(4em, auto)
+    "c9 c9 c9 c9" minmax(8em, auto)
+    ". . . ." minmax(4em, auto)
+    "c8 c8 c8 c8" minmax(8em, auto)
+
+  }
+}
+
+@media (min-width: 50em) {
+  .main-container {
+        
+          grid-template:
+          "ban ban ban ban ban ban ban ban"
+          "c1 c1 c1 c1 c2 c2 c2 c2" minmax(8em, auto)
+         ". . . . . . . ." minmax(4em, auto)
+         ". . c3 c3 c3 c3 . ." minmax(8em, auto)
+          "c4 c4 c4 c4 c4 c4 c4 c4" minmax(32em, auto)
+          ". . . . . . . . " minmax(4em, auto)
+          "c5 c5 c5 c5 c5 c5 c5 c5" minmax(32em, auto)
+          ". . . . . . . ." minmax(4em, auto)
+          "c6 c6 c6 c6 c6 c6 c6 c6" minmax(32em, auto)
+          ". . . . . . . . " minmax(4em, auto)
+          "c7 c7 c7 c7 c9 c9 c9 c9" minmax(32em, auto)
+          ". . c8 c8 c8 c8 . . " minmax(8em, auto)
+  }
+}
+
+@media (min-width: 75em) {
+  .main-container {
+
+    grid-template:
+      "ban ban ban ban ban ban ban ban ban ban ban ban"
+      "c1 c1 c1 c1 c2 c2 c2 c2 c3 c3 c3 c3" minmax(8em, auto)
+     ". . . . . . . . . . . ." minmax(4em, auto)
+      "c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4" minmax(32em, auto)
+      ". . . . . . . . . . . ." minmax(4em, auto)
+      "c5 c5 c5 c5 c5 c5 c5 c5 c5 c5 c5 c5" minmax(32em, auto)
+      ". . . . . . . . . . . ." minmax(4em, auto)
+      "c6 c6 c6 c6 c6 c6 c6 c6 c6 c6 c6 c6" minmax(32em, auto)
+      ". . . . . . . . . . . ." minmax(4em, auto)
+      "c7 c7 c7 c7 c9 c9 c9 c9 c8 c8 c8 c8" minmax(32em, auto)
+    
+  }
+}
